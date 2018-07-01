@@ -102,43 +102,45 @@ class Cross_Entropy:
 		return policy
 
 
-n_sessions = 250
-percentile = 50
-learning_rate = 0.5
+if __name__ == "__main__":
 
-#create environment
-env = gym.make("Taxi-v2")
+	n_sessions = 250
+	percentile = 50
+	learning_rate = 0.5
 
-CEM = Cross_Entropy(env)
-policy = CEM.loop(n_sessions, percentile, learning_rate)
+	#create environment
+	env = gym.make("Taxi-v2")
 
-
-print("TRY THE NEW POLICY")
-
-
-#save policy
-with open("policy", "wb") as fb:
-	pickle.dump(policy, fb)
+	CEM = Cross_Entropy(env)
+	policy = CEM.loop(n_sessions, percentile, learning_rate)
 
 
-#try out the policy
-s = env.reset()
-
-for t in range(200):
+	print("TRY THE NEW POLICY")
 
 
-	a = np.argmax(policy[s])
+	#save policy
+	with open("policy", "wb") as fb:
+		pickle.dump(policy, fb)
 
-	env.render()
 
-	new_s , r, done, info = env.step(a)
+	#try out the policy
+	s = env.reset()
 
-	print(r)
+	for t in range(200):
 
-	s = new_s
 
-	if(done):
-		break
+		a = np.argmax(policy[s])
+
+		env.render()
+
+		new_s , r, done, info = env.step(a)
+
+		print(r)
+
+		s = new_s
+
+		if(done):
+			break
 
 
 
