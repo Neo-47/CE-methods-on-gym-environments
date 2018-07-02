@@ -124,7 +124,6 @@ if __name__ == "__main__":
 		pickle.dump(policy, fb)
 
 	
-
 	#try out the policy
 	s = env.reset()
 
