@@ -2,9 +2,7 @@
 
 There are two approaches for deriving Reinforcement learning algorithms,
 
-
-
-![two](https://user-images.githubusercontent.com/19307995/42143368-0003521a-7db5-11e8-8b26-4476fcf7347d.png)
+<img src = "https://user-images.githubusercontent.com/19307995/42143368-0003521a-7db5-11e8-8b26-4476fcf7347d.png" width = "1000" margin = "1000"/>
 
 As the image illustrates, policy optimization just looks at the problem as an optimization problem, where you're trying to optimize your expected reward and have some parameters of your policy. The derivative free optimization (DFO) or evolutionary methods ignore the structure of the problem, and say we can take a parameter and get a noisy estimate of how good is it and then try to move to the part of the parameters space where we're getting better performance.
 
