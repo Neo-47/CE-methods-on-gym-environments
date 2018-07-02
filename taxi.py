@@ -104,6 +104,7 @@ class Cross_Entropy:
 
 if __name__ == "__main__":
 
+	
 	n_sessions = 250
 	percentile = 50
 	learning_rate = 0.5
@@ -122,6 +123,7 @@ if __name__ == "__main__":
 	with open("policy", "wb") as fb:
 		pickle.dump(policy, fb)
 
+	
 
 	#try out the policy
 	s = env.reset()
