@@ -9,3 +9,9 @@ There are two approaches for deriving Reinforcement learning algorithms,
 As the image illustrates, policy optimization just looks at the problem as an optimization problem, where you're trying to optimize your expected reward and have some parameters of your policy. The derivative free optimization (DFO) or evolutionary methods ignore the structure of the problem, and say we can take a parameter and get a noisy estimate of how good is it and then try to move to the part of the parameters space where we're getting better performance.
 
 The objective here is to maximize E [R | π(.,θ)]. The DFO just looks at the problem as a black box where we put in θ and then something complicated happens and then comes the rewards of the episode. Cross entropy is an evolutionary algorithm because at every point in time it's maintaining a distribution over the policy parameter vector. It's like if you have a population of individuals and some of them have higher fitness than others, so your distribution moves towards the individuals with higher fitness. 
+
+## Continuous Space
+
++ CartPole: A reward of +1 is provided for every timestep that the pole remains upright. The episode ends when the pole is more than 15 degrees from vertical, or the cart moves more than 2.4 units from the center.
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/19307995/42143893-ec24217c-7db7-11e8-9543-4891e1d5de7d.gif)
