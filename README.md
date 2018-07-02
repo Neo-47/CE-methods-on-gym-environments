@@ -13,3 +13,9 @@ The objective here is to maximize E [R | π(.,θ)]. The DFO just looks at the pr
 + CartPole: A reward of +1 is provided for every timestep that the pole remains upright. The episode ends when the pole is more than 15 degrees from vertical, or the cart moves more than 2.4 units from the center.
 
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/19307995/42143893-ec24217c-7db7-11e8-9543-4891e1d5de7d.gif)
+
+
++ LunarLander: If lander moves away from landing pad it loses reward back. Episode finishes if the lander crashes or comes to rest, receiving additional -100 or +100 points. Each leg ground contact is +10. Firing main engine is -0.3 points each frame. Solved is 200 points. Landing outside landing pad is possible. Fuel is infinite, so an agent can learn to fly and then land on its first attempt. Four discrete actions available: do nothing, fire left orientation engine, fire main engine, fire right orientation engine. I trained the agent until I got at least +50 average rewards. You can train it longer to get the optimal behavior.
+
+![ezgif com-video-to-gif 1](https://user-images.githubusercontent.com/19307995/42178987-a83df1ce-7e32-11e8-8bc8-1ee48eb1e57d.gif)
+
