@@ -33,5 +33,10 @@ However, methods able to take advantage of the details of the individual behavio
 
 ![screenshot from 2018-07-04 00-53-32](https://user-images.githubusercontent.com/19307995/42248342-539ffe7a-7f25-11e8-842d-823bb129edb9.png)
 
+## Installation and dependencies
 
+The code is return in Python 3. It's recommended if you create a separate environment and install all next packages,
 
++ OpenAI gym
++ Sklearn
++ numpy
