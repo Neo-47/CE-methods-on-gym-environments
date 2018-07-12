@@ -29,6 +29,14 @@ However, methods able to take advantage of the details of the individual behavio
 <img src = "https://user-images.githubusercontent.com/19307995/42178987-a83df1ce-7e32-11e8-8bc8-1ee48eb1e57d.gif"/>
 </p>
 
++ Atari Pong: The goal is to maximize your score in the Atari 2600 game Pong. In this environment, the observation is an RGB image of the screen, which is an array of shape (210, 160, 3) Each action is repeatedly performed for a duration of kkk frames, where kkk is uniformly sampled from {2,3,4}. There is some pre-processing and tuning done for you in **pong.py** where images  are rescaled to 42x42 to speed up computation and I used last 4 frames as observations to account for ball velocity.
+
+<p align="center">
+<img src = "https://user-images.githubusercontent.com/19307995/42661834-b27ba136-862f-11e8-8601-1c8023149a16.gif"/>
+</p>
+
++ Note: The policy found in file **Policies** for pong is not optimal at all. I put it there to see the output after saving a keras model. You need to generate nearly 100 sessions and fit the network for a pretty good number of epochs.
+
 
 ## Discrete State Space
 
@@ -43,6 +51,8 @@ However, methods able to take advantage of the details of the individual behavio
 The code is written in Python 3. It's recommended if you create a separate environment and install all next packages,
 
 + OpenAI gym
++ Keras
++ Tensorflow
 + Sklearn
 + numpy
 
@@ -53,3 +63,5 @@ To load different policies in corresponding environments, use this snippet,
 with open("policy directory", "rb") as fb:
   agent = pickle.load(fb)
 ```
+
+The code for loading a keras model is found in the corresponding file.
